@@ -19,22 +19,14 @@
     .background-image {
       background-image: url("us.jpg");
       background-position: center center;
-      /* background-attachment: fixed; */
       position: fixed;
       background-size: cover;
-      /* background-size: contain; */
-      /* background-repeat: no-repeat; */
       height: 100vh;
       width: 100%;
       z-index: -3;
     }
 
     .hero {
-      /* background-image: url("us.jpg");
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover; */
-      /* position: absolute; */
       height: 100vh; 
       box-sizing:border-box;
       display: flex;
@@ -50,9 +42,8 @@
     .hero-header {
       /* color: #e4642c; */
       color: white;
-      /* margin-top: -500px; */
       margin-top: -20rem;
-      /* margin-top: -5rem; */
+      width: 100vw;
       text-align: center;
       position: fixed;
       z-index: -2;
@@ -157,35 +148,30 @@
         <p>more stuff</p>
 
         <h1>countdown</h1>
-        <p>more stuff</p>
-
-        <h1>rsvps</h1>
-        <p>more stuff</p>
-        <h1>rsvps</h1>
-        <p>more stuff</p>
-
-        <h1>day schedule</h1>
-        <p>more stuff</p>
-
-        <h1>look cute</h1>
-        <p>more stuff</p>
-
-        <h1>pictures</h1>
-        <p>more stuff</p>
-
-        <h1>accommodation recommendation</h1>
-        <p>more stuff</p>
-
-        <h1>countdown</h1>
-        <p>more stuff</p>
-
-        <h1>rsvps</h1>
-        <p>more stuff</p>
+        <p id="countdown">more stuff</p>
       </div>
     </div>
   <div class="content-background">
   </div>
   </div>
+
+  <script>
+    const findOverflow = floating => floating - parseInt(floating)
+
+    const updateCountdown = () => {
+      const timeLeft = new Date(2022, 9, 8, 10, 30) - Date.now()
+      const days = timeLeft / 1000 / 60 / 60 / 24 
+      const hours = findOverflow(days) * 24
+      const minutes = findOverflow(hours) * 60
+      const seconds = findOverflow(minutes) * 60
+
+      const countdown = `${parseInt(days)} days, ${parseInt(hours)} hours, ${parseInt(minutes)} minutes, and ${parseInt(seconds)} seconds.`
+      document.getElementById('countdown').innerText = countdown
+    }
+
+    updateCountdown()
+    setInterval(updateCountdown, 1000)
+  </script>
 
 </body>
 </html>
