@@ -42,7 +42,7 @@
     .hero-header {
       /* color: #e4642c; */
       color: white;
-      margin-top: -20rem;
+      margin-top: -24rem;
       width: 100vw;
       text-align: center;
       position: fixed;
@@ -51,6 +51,7 @@
 
     .hero-header h1 {
       font-size: 3.5rem;
+      line-height: 0.9;
     }
 
     .below-the-fold {
@@ -63,8 +64,8 @@
     }
 
     .content-background {
-      background-color: white;
-      /* background-color: #e4642c; */
+      /* background-color: white; */
+      background-color: #e4642c;
       min-height: 50rem;
       min-width: 100vw;
       margin-top: 400px;
@@ -80,39 +81,47 @@
     .content {
       width: 100%;
       max-width: 800px;
-      background-color: orange;
-      /* margin: 0 1rem 1rem; */
-      /* padding: 2rem; */
       min-height: 50vw;
       border-radius: 100vw 100vw 0 0;
-      background-color: antiquewhite;
+      background-color: white;
       display: grid;
       grid-template-columns: auto;
       justify-content: center;
-      /* background-color: white; */
-      /* background-color: #e4642c; */
     }
-
-    /* .curvy-bit {
-      height: 50vw;
-    } */
 
     .curvy-bit path {
       fill: transparent;
       /* fill: orange; */
-      margin-bottom: -4rem;
     }
 
     .curvy-bit text {
       fill: black;
       font-family: 'Abril Fatface';
       text-anchor: middle;
-      font-size: 1rem;
+      /* font-size: 1rem; */
     }
 
     .straight-bit {
       padding: 0 2rem;
-      margin-top: -4rem;
+      /* margin-top: -4rem; */
+    }
+
+    /* #countdown-semi-circle {
+      fill: antiquewhite;
+    }
+
+    #countdown-path {
+      fill: #e4642c;
+    } */
+
+    #countdown path {
+      fill: #e4642c;
+    }
+
+    #countdown svg text {
+      fill: white;
+      font-family: 'Abril Fatface';
+      text-anchor: middle;
     }
 
     @media screen and (max-width: 832px) {
@@ -132,7 +141,7 @@
   <div class="hero">
     <div class="hero-header">
       <h1 class="hero-h1">Bella & Willem</h1>
-      <h2 class="hero-p">OCTOBER 8TH, 2022</h2>
+      <!-- <h2 class="hero-p">OCTOBER 8TH, 2022</h2> -->
     </div>
   </div>
 
@@ -153,6 +162,7 @@
         </div>
 
         <div class="straight-bit">
+
           <h1>rsvps</h1>
           <p>more stuff</p>
 
@@ -168,8 +178,20 @@
           <h1>accommodation recommendation</h1>
           <p>more stuff</p>
 
-          <h1>countdown</h1>
-          <p id="countdown">more stuff</p>
+          <div id="countdown">
+            <svg viewBox="0 0 400 200">
+              <path id="countdown-semi-circle" d="M 30,200
+                                                  A 10,10 0,1,1 370,200" />
+              <path id="countdown-path" d="M 60,200
+                                           A 10,10 0,1,1 340,200" />
+              <text width="400">
+                <textPath id="countdown-text" xlink:href="#countdown-path" startOffset="50%">
+                  see you in
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
         </div>
 
       </div>
@@ -188,8 +210,13 @@
       const minutes = findOverflow(hours) * 60
       const seconds = findOverflow(minutes) * 60
 
-      const countdown = `${parseInt(days)} days, ${parseInt(hours)} hours, ${parseInt(minutes)} minutes, and ${parseInt(seconds)} seconds.`
-      document.getElementById('countdown').innerText = countdown
+      const countdown = `
+        See you in
+        ${parseInt(days)} day${ days === 1 ? '' : 's'},
+        ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
+        and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}.
+      `
+      document.getElementById('countdown-text').textContent = countdown
     }
 
     updateCountdown()
