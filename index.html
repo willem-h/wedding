@@ -57,7 +57,7 @@
       display: grid;
     }
 
-    .content-background, .content {
+    .content-background, .container {
       grid-column: 1;
       grid-row: 1;
     }
@@ -67,39 +67,59 @@
       /* background-color: #e4642c; */
       min-height: 50rem;
       min-width: 100vw;
-      margin-top: 50vw;
+      margin-top: 400px;
       z-index: -1;
     }
 
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
     .content {
-      margin: 0 1rem 1rem;
-      padding: 1rem;
+      width: 100%;
+      max-width: 800px;
+      background-color: orange;
+      /* margin: 0 1rem 1rem; */
+      /* padding: 2rem; */
+      min-height: 50vw;
       border-radius: 100vw 100vw 0 0;
       background-color: antiquewhite;
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: center;
       /* background-color: white; */
       /* background-color: #e4642c; */
     }
 
-    .curvy-bit {
+    /* .curvy-bit {
       height: 50vw;
-    }
+    } */
 
     .curvy-bit path {
       fill: transparent;
       /* fill: orange; */
+      margin-bottom: -4rem;
     }
 
     .curvy-bit text {
       fill: black;
       font-family: 'Abril Fatface';
       text-anchor: middle;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
-    /* .curvy-bit svg {
-      height: 50vw;
-      width:
-    } */
+    .straight-bit {
+      padding: 0 2rem;
+      margin-top: -4rem;
+    }
+
+    @media screen and (max-width: 832px) {
+      .content-background {
+        margin-top: 50vw;
+      }
+    }
 
   </style>
 </head>
@@ -117,42 +137,45 @@
   </div>
 
   <div class="below-the-fold">
-    <div class="content">
+    <div class="container">
+      <div class="content">
 
-      <div class="curvy-bit">
-        <svg viewBox="0 0 248 124">
-          <path id="curve" d="M 24,124
-                              A 10,10 0,1,1 224,124" />
-          <text width="248">
-            <textPath xlink:href="#curve" startOffset="50%">
-              Together with their families
-            </textPath>
-          </text>
-        </svg>
-      </div>
+        <div class="curvy-bit">
+          <svg viewBox="0 0 400 200">
+            <path id="curve" d="M 30,200
+                                A 10,10 0,1,1 370,200" />
+            <text width="400">
+              <textPath xlink:href="#curve" startOffset="50%">
+                together with their families invite you to celebrate their wedding
+              </textPath>
+            </text>
+          </svg>
+        </div>
 
-      <div class="straight-bit">
-        <h1>rsvps</h1>
-        <p>more stuff</p>
+        <div class="straight-bit">
+          <h1>rsvps</h1>
+          <p>more stuff</p>
 
-        <h1>day schedule</h1>
-        <p>more stuff</p>
+          <h1>day schedule</h1>
+          <p>more stuff</p>
 
-        <h1>look cute</h1>
-        <p>more stuff</p>
+          <h1>look cute</h1>
+          <p>more stuff</p>
 
-        <h1>pictures</h1>
-        <p>more stuff</p>
+          <h1>pictures</h1>
+          <p>more stuff</p>
 
-        <h1>accommodation recommendation</h1>
-        <p>more stuff</p>
+          <h1>accommodation recommendation</h1>
+          <p>more stuff</p>
 
-        <h1>countdown</h1>
-        <p id="countdown">more stuff</p>
+          <h1>countdown</h1>
+          <p id="countdown">more stuff</p>
+        </div>
+
       </div>
     </div>
-  <div class="content-background">
-  </div>
+    <div class="content-background"></div>
+
   </div>
 
   <script>
