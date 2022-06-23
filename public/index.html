@@ -150,7 +150,7 @@
                                 A 10,10 0,1,1 370,200" />
             <text width="400">
               <textPath xlink:href="#curve" startOffset="50%">
-                together with their families invite you to celebrate their wedding
+                together with our families
               </textPath>
             </text>
           </svg>
@@ -225,23 +225,18 @@
       event.preventDefault()
       const rawData = new FormData(event.target)
       const entries = Object.fromEntries(rawData.entries())
-      console.log(new FormData(event.target))
-      fetch('https://script.google.com/macros/s/AKfycbwdNe4KSK-2nStQnE9L-ZqgDX8ptEq1ZoM26uAMIPmUtZf7IY63tBrLBjzAZn5hJpM4/exec', {
+      fetch('http://localhost:5001/wedding-89b45/us-central1/rsvp', {
         method: 'POST',
-        mode: 'no-cors',
-        credentials: 'include',
-        redirect: 'follow',
         headers: { 'Content-Type': 'application/json' },
-        // data: JSON.stringify(entries)
-        data: new FormData(event.target)
+        body: JSON.stringify(entries)
       })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      })
+      .then(console.log)
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log('Success:', data);
+      // })
       .catch((error) => {
         console.error('Server Error:', error);
-        console.log(error)
       })
     }
 
