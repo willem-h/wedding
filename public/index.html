@@ -159,11 +159,7 @@
         <div class="straight-bit">
 
           <h1>rsvps</h1>
-          <form id="rsvp-form">
-            <label for="name">Name</label>
-            <input type="text" name="name">
-            <input type="submit" value="Submit">
-          </form>
+          <p>more stuff</p>
 
           <h1>day schedule</h1>
           <p>more stuff</p>
@@ -219,33 +215,6 @@
     }
 
     updateCountdown()
-    
-
-    const handleRSVP = (event) => {
-      event.preventDefault()
-      const rawData = new FormData(event.target)
-      const entries = Object.fromEntries(rawData.entries())
-      console.log(new FormData(event.target))
-      fetch('https://script.google.com/macros/s/AKfycbwdNe4KSK-2nStQnE9L-ZqgDX8ptEq1ZoM26uAMIPmUtZf7IY63tBrLBjzAZn5hJpM4/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        credentials: 'include',
-        redirect: 'follow',
-        headers: { 'Content-Type': 'application/json' },
-        // data: JSON.stringify(entries)
-        data: new FormData(event.target)
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      })
-      .catch((error) => {
-        console.error('Server Error:', error);
-        console.log(error)
-      })
-    }
-
-    document.getElementById('rsvp-form').onsubmit = handleRSVP
   </script>
 
 </body>
