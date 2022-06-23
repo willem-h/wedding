@@ -159,7 +159,7 @@
         <div class="straight-bit">
 
           <h1>rsvps</h1>
-          <form id="rsvp-form">
+          <form id="rsvp-form" name="rsvp" method="post" netlify>
             <label for="name">Name</label>
             <input type="text" name="name">
             <input type="submit" value="Submit">
@@ -221,26 +221,26 @@
     updateCountdown()
     
 
-    const handleRSVP = (event) => {
-      event.preventDefault()
-      const rawData = new FormData(event.target)
-      const entries = Object.fromEntries(rawData.entries())
-      fetch('http://localhost:5001/wedding-89b45/us-central1/rsvp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(entries)
-      })
-      .then(console.log)
-      // .then(response => response.json())
-      // .then(data => {
-      //   console.log('Success:', data);
-      // })
-      .catch((error) => {
-        console.error('Server Error:', error);
-      })
-    }
+    // const handleRSVP = (event) => {
+    //   event.preventDefault()
+    //   const rawData = new FormData(event.target)
+    //   const entries = Object.fromEntries(rawData.entries())
+    //   fetch('http://localhost:5001/wedding-89b45/us-central1/rsvp', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(entries)
+    //   })
+    //   .then(console.log)
+    //   // .then(response => response.json())
+    //   // .then(data => {
+    //   //   console.log('Success:', data);
+    //   // })
+    //   .catch((error) => {
+    //     console.error('Server Error:', error);
+    //   })
+    // }
 
-    document.getElementById('rsvp-form').onsubmit = handleRSVP
+    // document.getElementById('rsvp-form').onsubmit = handleRSVP
   </script>
 
 </body>
