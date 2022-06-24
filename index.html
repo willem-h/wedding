@@ -201,17 +201,21 @@
 
     const updateCountdown = () => {
       const timeLeft = new Date(2022, 9, 8, 10, 30) - Date.now()
-      const days = timeLeft / 1000 / 60 / 60 / 24 
-      const hours = findOverflow(days) * 24
-      const minutes = findOverflow(hours) * 60
-      const seconds = findOverflow(minutes) * 60
-
-      const countdown = `
-        See you in
-        ${parseInt(days)} day${ days === 1 ? '' : 's'},
-        ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
-        and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}.
-      `
+      let countdown = ''
+      if (timeLeft >= 0) {
+        const days = timeLeft / 1000 / 60 / 60 / 24 
+        const hours = findOverflow(days) * 24
+        const minutes = findOverflow(hours) * 60
+        const seconds = findOverflow(minutes) * 60
+        countdown = `
+          See you in
+          ${parseInt(days)} day${ days === 1 ? '' : 's'},
+          ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
+          and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}.
+        `
+      } else {
+        countdown = `We're married!`
+      }
       document.getElementById('countdown-text').textContent = countdown
     }
 
