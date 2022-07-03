@@ -4,10 +4,6 @@
   <title>Bella & Willem</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
   <style>
     html, body {
       margin: 0;
@@ -36,18 +32,14 @@
       margin: 1rem;
     }
 
-    h1 {
-      font-family: 'Abril Fatface';
-    }
-
     .hero-header {
-      /* color: #e4642c; */
       color: white;
       margin-top: -24rem;
       width: 100vw;
       text-align: center;
       position: fixed;
       z-index: -2;
+      max-width: 80%;
     }
 
     .hero-header h1 {
@@ -57,93 +49,7 @@
 
     .logo {
       height: 6rem;
-      /* padding: 1.5rem 1.5rem; */
     }
-    
-    .below-the-fold {
-      display: grid;
-    }
-
-    .content-background, .container {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .content-background {
-      /* background-color: white; */
-      background-color: #e4642c;
-      min-width: 100vw;
-      margin-top: 400px;
-      z-index: -1;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      padding: 0 1rem;
-    }
-
-    .content {
-      width: 100%;
-      max-width: 800px;
-      min-height: 50vw;
-      border-radius: 100vw 100vw 0 0;
-      background-color: white;
-      /* background-color: orange; */
-    }
-
-    /* .content .logo {
-      margin-top: -30vw;
-    } */
-
-    .curvy-bit {
-      display: flex;
-      align-items: center;
-      /* max-width: 100%; */
-      flex-direction: column;
-      /* max-height: 10rem; */
-    }
-
-    .curvy-bit path {
-      fill: transparent;
-      /* fill: orange; */
-    }
-
-    .curvy-bit text {
-      fill: black;
-      font-family: 'Abril Fatface';
-      text-anchor: middle;
-      /* font-size: 1rem; */
-    }
-
-    .straight-bit {
-      padding: 0 3rem 0rem;
-    }
-
-    #countdown svg {
-      margin-bottom: -0.25rem;
-    }
-
-    #countdown path {
-      fill: #e4642c;
-    }
-
-    #countdown svg text {
-      fill: white;
-      font-family: 'Abril Fatface';
-      text-anchor: middle;
-    }
-
-    @media screen and (max-width: 832px) {
-      .content-background {
-        margin-top: 50vw;
-      }
-
-      .straight-bit {
-        padding: 0 1rem 0rem;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -151,98 +57,14 @@
   <div class="background-image">
   </div>
 
-
   <div class="hero">
     <div class="hero-header">
-      <!-- <h4>Save the date for the wedding of</h4> -->
-      <!-- <H4>SAVE THE DATE FOR THE WEDDING OF</H4> -->
       <H4>SAVE THE DATE</H4>
       <img src="./logo_white.svg" class="logo" />
-      <!-- <h4>10AM OCTOBER 8TH 2022</h4>
-      <h4>BELLA GRACE MANOR, WOOMBYE, QUEENSLAND</h4> -->
-      <!-- <h4>10AM OCTOBER 8TH 2022
-      AT BELLA GRACE MANOR, WOOMBYE, QUEENSLAND</h4> -->
-      <!-- <h4>10am October 8th 2022 at Bella Grace Manor, Woombye, Queensland</h4> -->
-      <!-- <H4>10AM OCTOBER 8TH 2022 AT BELLA GRACE MANOR, WOOMBYE QLD</H4> -->
       <!-- <H4>🗓 OCTOBER 8TH 2022 </br>📍 WOOMBYE QLD</H4> -->
       <H4>OCTOBER 8TH 2022<br>WOOMBYE QLD</H4>
-      <!-- <H4>WOOMBYE QLD</H4> -->
     </div>
   </div>
-
-  <div class="below-the-fold">
-    <div class="container">
-      <div class="content">
-
-        <div class="curvy-bit">
-          <svg viewBox="0 0 400 200">
-            <path id="curve" d="M 30,200
-                                A 10,10 0,1,1 370,200" />
-            <text width="400">
-              <textPath xlink:href="#curve" startOffset="50%">
-                Together with their families
-              </textPath>
-            </text>
-          </svg>
-
-          <img src="./logo_black.svg" class="logo" />
-        </div>
-
-        <div class="straight-bit">
-
-          <!-- <h4>TOGETHER WITH THEIR FAMILIES</h4> -->
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.46 114.72"><defs><style>.cls-1{fill:#000;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Type"><path class="cls-1" d="M26.48,3.45C38,3.45,44.89,6,44.89,14c0,5.65-4.48,11.1-15.38,12.34l-.07.14C38.61,27,43.3,30.27,43.3,36c0,12.42-12.75,15.73-24.82,15.73H0l.34-1.31H4L11.58,4.76H7.45l.2-1.31Zm-9.86,47h1.45c6.41,0,11.24-5.8,11.24-14.55,0-6-2.14-8.55-7.38-8.55H20.55ZM20.82,26H21c5.66,0,10.55-3.52,10.55-13.52,0-5-2.27-7.72-6.83-7.72H24.2Z"/><path class="cls-1" d="M79,26c0,6.75-7.37,8.75-13.79,9.65a41.3,41.3,0,0,1-5.38.34c-1,9.73,1,13.93,5.8,13.93,3.38,0,7.1-2.41,9.51-9.93l1.38.42c-2.55,8.48-7.58,12-15.86,12-8.76,0-13.93-4.69-13.93-12.83,0-14.14,8.55-21.38,20.76-21.38C75.23,18.2,79,20.89,79,26ZM66.82,19.51c-3.73,0-5.86,6.83-6.9,15.17,4.69-.2,9-2.48,9-11C68.89,21.17,68.47,19.51,66.82,19.51Z"/><path class="cls-1" d="M101.85,46.41c-3.17,4.48-5.52,6-10.07,6-6.34,0-9.52-2.76-9.52-8.69,0-2.55.28-4.76,2.28-14.69L90.06,1.24h-4.9L85.37,0H103L95,42.89a32.24,32.24,0,0,0-.76,4.76c0,1.24.42,1.93,1.73,1.93,1.1,0,2.62-.9,4.76-4Z"/><path class="cls-1" d="M126.26,46.41c-3.17,4.48-5.52,6-10.07,6-6.34,0-9.52-2.76-9.52-8.69,0-2.55.28-4.76,2.28-14.69l5.52-27.79h-4.9L109.78,0h17.65l-8,42.89a32.24,32.24,0,0,0-.76,4.76c0,1.24.42,1.93,1.73,1.93,1.1,0,2.62-.9,4.76-4Z"/><path class="cls-1" d="M169.42,46.54c-2.48,4.07-5.44,5.87-9.24,5.87-6.82,0-9.37-3.45-8.27-9l-.35-.07c-1.86,5.38-5.37,9.11-11.37,9.11-8,0-11.1-4.62-11.1-12,0-12.69,5.79-22.21,17-22.21,5.1,0,6.69,1.93,7.72,4.55l1-3.65c3.31.07,9.93,0,12.62-.55C165.63,27,163.84,35,162.32,45a18.75,18.75,0,0,0-.27,2.48c0,1.79.82,2.21,1.79,2.21s2.55-.69,4.55-3.8Zm-18.89-4.68a55.1,55.1,0,0,0,2.41-16.07c0-4.14-1.93-5.72-3.86-5.72s-3.51,1.93-4.89,6.75a75.38,75.38,0,0,0-2.76,17.86c0,2.35.27,5,3,5C146.53,49.72,148.88,47.3,150.53,41.86Z"/><path class="cls-1" d="M213,51.48c-.57,9.1-5.4,17.68-20.18,17.68-10.81,0-17.17-3.86-17.17-11.08,0-6.94,7.22-10.69,16.31-11.43v-.23c-7-.23-11.88-3-11.88-7.84,0-7,7.22-10.47,17.17-10.47,5.57,0,11.66,1.6,11.66,7.68,0,4.55-3,6.08-5.52,6.08-4.89,0-5-4.83-3.64-6.88h3c1.93-3.86,0-5.74-3.19-5.74-3.41,0-7.16,2.45-7.16,9.89,0,2.28.4,5.52,1.53,7a10,10,0,0,1,3.76-1.08c.91,0,2.1.34,2.1,1.7s-1.19,1.88-2.39,1.88a7.39,7.39,0,0,1-3.81-1.54c-2.73,2.34-4.66,4.95-4.66,10.81,0,4.49,2,8.87,8.76,8.87,8.3,0,13.47-7.34,13.75-15.07l-7.79,1c-1.64.22-1.81.79-2.16,2.55l-.85,0c.23-7.73,2-11,5.52-11.66,2.16-.34,11.14-1.42,13.53-1.93,1-.23,1.53-.68,1.76-2.56l.91.06c.28,5.74-1,10.91-5,11.6Z"/><path class="cls-1" d="M57.84,80.66l-2-13.58H51.63l.21-1.31h21l-.21,1.31H68.66l6,36.89,15-36.89H84.8l.2-1.31H95.62l-.27,1.31H91.69L72.87,114H63.56L58.46,84,45.15,114H36.32L29,67.08h-3.8l.14-1.31H45.22l-.14,1.31H41.77l6.14,36.13Z"/><path class="cls-1" d="M111.35,108.65c-2.49,3.87-5,6.07-10.14,6.07s-8.83-2.2-8.83-8a46.61,46.61,0,0,1,.9-6.68L96.8,82.45H91.35l.21-1.24h18.27c-2.76,13.38-3.93,19.38-4.83,24.2a38,38,0,0,0-.69,4.83c0,1.24.69,1.66,1.45,1.66,1.24,0,2.69-1.25,4.55-4ZM96.66,71.07c0-4.68,4.14-7.44,9-7.44,3.93,0,6.35,1.79,6.35,5.24,0,4.69-4.21,7.38-8.9,7.38C98,76.25,96.66,73.42,96.66,71.07Z"/><path class="cls-1" d="M135.28,108.72c-3.18,4.49-5.52,6-10.07,6-6.35,0-9.52-2.76-9.52-8.69,0-2.55.28-4.75,2.28-14.68l5.51-27.79h-4.89l.2-1.24h17.66l-8,42.89a30.86,30.86,0,0,0-.76,4.75c0,1.25.41,1.94,1.72,1.94,1.11,0,2.62-.9,4.76-4Z"/><path class="cls-1" d="M159.69,108.72c-3.18,4.49-5.52,6-10.07,6-6.35,0-9.52-2.76-9.52-8.69,0-2.55.28-4.75,2.28-14.68l5.51-27.79H143l.21-1.24h17.65l-8,42.89a30.86,30.86,0,0,0-.76,4.75c0,1.25.41,1.94,1.72,1.94,1.11,0,2.62-.9,4.76-4Z"/><path class="cls-1" d="M194.65,88.31c0,6.76-7.38,8.76-13.8,9.66a43.12,43.12,0,0,1-5.37.34c-1,9.72,1,13.93,5.79,13.93,3.38,0,7.1-2.41,9.51-9.93l1.38.41c-2.55,8.49-7.58,12-15.86,12-8.75,0-13.92-4.69-13.92-12.82,0-14.14,8.54-21.38,20.75-21.38C190.92,80.52,194.65,83.21,194.65,88.31Zm-12.14-6.48c-3.72,0-5.86,6.83-6.9,15.17,4.69-.21,9-2.48,9-11C184.58,83.49,184.16,81.83,182.51,81.83Z"/><path class="cls-1" d="M222,90.24c1.17-4.48,1.31-6.2-.62-6.2-1.52,0-3.79,1.65-6.41,7.17-2.48,5.24-3.86,11.45-4.62,22.62a125.91,125.91,0,0,0-13.72.69l2.89-12.83,2.83-19.24h-4.76l.14-1.24h17.45l-2.69,11.45.2.07c3.11-6.83,6.35-12.21,14.28-12.21,4.48,0,6.27,2.28,6.27,5.66a16.79,16.79,0,0,1-1,5.1l.27.07c1.93-4.21,5.24-10.83,13.38-10.83,4.62,0,7.1,2.62,7.17,6.48a24.9,24.9,0,0,1-.76,5.93l-3.24,13a28.12,28.12,0,0,0-.82,4.34c0,1.38.82,1.66,1.79,1.66s2.62-1.11,4.34-4l1.17.69c-2.62,4.13-5.17,6.13-10.2,6.13-5.24,0-9-2.2-9-8.06,0-4.56,3.51-15,4.06-16.42,1.18-3.24,2.35-6.2-.13-6.2-1.52,0-3.52,2.14-5.59,6.13-3,5.73-4.55,13.66-5.65,23.66-2-.07-11.38.27-13.1.69C217.61,106.31,219.75,98.86,222,90.24Z"/></g></g></svg> -->
-          <h4>INVITE YOU TO CELEBRATE THEIR MARRIAGE</h4>
-          <h4>SAVE THE DATE - 10AM OCTOBER 8TH 2022</h4>
-          <h4>AT BELLA GRACE MANOR, WOOMBYE, QUEENSLAND</h4>
-
-          <div id="countdown">
-            <svg viewBox="0 0 400 200">
-              <path id="countdown-semi-circle" d="M 30,200
-                                                  A 10,10 0,1,1 370,200" />
-              <path id="countdown-path" d="M 60,200
-                                           A 10,10 0,1,1 340,200" />
-              <text width="400">
-                <textPath id="countdown-text" xlink:href="#countdown-path" startOffset="50%">
-                  see you in
-                </textPath>
-              </text>
-            </svg>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <div class="content-background"></div>
-
-  </div>
-
-  <script>
-    const findOverflow = floating => floating - parseInt(floating)
-
-    const updateCountdown = () => {
-      const timeLeft = new Date(2022, 9, 8, 10, 30) - Date.now()
-      let countdown = ''
-      if (timeLeft >= 0) {
-        const days = timeLeft / 1000 / 60 / 60 / 24 
-        const hours = findOverflow(days) * 24
-        const minutes = findOverflow(hours) * 60
-        const seconds = findOverflow(minutes) * 60
-        countdown = `
-          See you in
-          ${parseInt(days)} day${ days === 1 ? '' : 's'},
-          ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
-          and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}.
-        `
-      } else {
-        countdown = `We're married!`
-      }
-      document.getElementById('countdown-text').textContent = countdown
-    }
-
-    updateCountdown()
-  </script>
 
 </body>
 </html>
