@@ -4,10 +4,6 @@
   <title>Bella & Willem</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
   <style>
     html, body {
       margin: 0;
@@ -36,18 +32,14 @@
       margin: 1rem;
     }
 
-    h1 {
-      font-family: 'Abril Fatface';
-    }
-
     .hero-header {
-      /* color: #e4642c; */
       color: white;
       margin-top: -24rem;
       width: 100vw;
       text-align: center;
       position: fixed;
       z-index: -2;
+      max-width: 80%;
     }
 
     .hero-header h1 {
@@ -55,77 +47,9 @@
       line-height: 0.9;
     }
 
-    .below-the-fold {
-      display: grid;
+    .logo {
+      height: 6rem;
     }
-
-    .content-background, .container {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .content-background {
-      /* background-color: white; */
-      background-color: #e4642c;
-      min-width: 100vw;
-      margin-top: 400px;
-      z-index: -1;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      padding: 0 1rem;
-    }
-
-    .content {
-      width: 100%;
-      max-width: 800px;
-      min-height: 50vw;
-      border-radius: 100vw 100vw 0 0;
-      background-color: white;
-    }
-
-    .curvy-bit path {
-      fill: transparent;
-      /* fill: orange; */
-    }
-
-    .curvy-bit text {
-      fill: black;
-      font-family: 'Abril Fatface';
-      text-anchor: middle;
-      /* font-size: 1rem; */
-    }
-
-    .straight-bit {
-      padding: 0 3rem 0rem;
-    }
-
-    #countdown svg {
-      margin-bottom: -0.25rem;
-    }
-
-    #countdown path {
-      fill: #e4642c;
-    }
-
-    #countdown svg text {
-      fill: white;
-      font-family: 'Abril Fatface';
-      text-anchor: middle;
-    }
-
-    @media screen and (max-width: 832px) {
-      .content-background {
-        margin-top: 50vw;
-      }
-
-      .straight-bit {
-        padding: 0 1rem 0rem;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -133,94 +57,14 @@
   <div class="background-image">
   </div>
 
-
   <div class="hero">
     <div class="hero-header">
-      <h1 class="hero-h1">Bella & Willem</h1>
-      <!-- <h2 class="hero-p">OCTOBER 8TH, 2022</h2> -->
+      <H4>SAVE THE DATE</H4>
+      <img src="./logo_white.svg" class="logo" />
+      <!-- <H4>🗓 OCTOBER 8TH 2022 </br>📍 WOOMBYE QLD</H4> -->
+      <H4>OCTOBER 8TH 2022<br>WOOMBYE QLD</H4>
     </div>
   </div>
-
-  <div class="below-the-fold">
-    <div class="container">
-      <div class="content">
-
-        <div class="curvy-bit">
-          <svg viewBox="0 0 400 200">
-            <path id="curve" d="M 30,200
-                                A 10,10 0,1,1 370,200" />
-            <text width="400">
-              <textPath xlink:href="#curve" startOffset="50%">
-                together with our families
-              </textPath>
-            </text>
-          </svg>
-        </div>
-
-        <div class="straight-bit">
-
-          <h1>rsvps</h1>
-          <p>more stuff</p>
-
-          <h1>day schedule</h1>
-          <p>more stuff</p>
-
-          <h1>look cute</h1>
-          <p>more stuff</p>
-
-          <h1>pictures</h1>
-          <p>more stuff</p>
-
-          <h1>accommodation</h1>
-          <p>more stuff</p>
-
-          <div id="countdown">
-            <svg viewBox="0 0 400 200">
-              <path id="countdown-semi-circle" d="M 30,200
-                                                  A 10,10 0,1,1 370,200" />
-              <path id="countdown-path" d="M 60,200
-                                           A 10,10 0,1,1 340,200" />
-              <text width="400">
-                <textPath id="countdown-text" xlink:href="#countdown-path" startOffset="50%">
-                  see you in
-                </textPath>
-              </text>
-            </svg>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <div class="content-background"></div>
-
-  </div>
-
-  <script>
-    const findOverflow = floating => floating - parseInt(floating)
-
-    const updateCountdown = () => {
-      const timeLeft = new Date(2022, 9, 8, 10, 30) - Date.now()
-      let countdown = ''
-      if (timeLeft >= 0) {
-        const days = timeLeft / 1000 / 60 / 60 / 24 
-        const hours = findOverflow(days) * 24
-        const minutes = findOverflow(hours) * 60
-        const seconds = findOverflow(minutes) * 60
-        countdown = `
-          See you in
-          ${parseInt(days)} day${ days === 1 ? '' : 's'},
-          ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
-          and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}.
-        `
-      } else {
-        countdown = `We're married!`
-      }
-      document.getElementById('countdown-text').textContent = countdown
-    }
-
-    updateCountdown()
-  </script>
 
 </body>
 </html>
