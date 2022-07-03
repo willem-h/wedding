@@ -50,6 +50,14 @@
     .logo {
       height: 6rem;
     }
+
+    #countdown-text {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -61,10 +69,36 @@
     <div class="hero-header">
       <H4>SAVE THE DATE</H4>
       <img src="./logo_white.svg" class="logo" />
-      <!-- <H4>🗓 OCTOBER 8TH 2022 </br>📍 WOOMBYE QLD</H4> -->
-      <H4>OCTOBER 8TH 2022<br>WOOMBYE QLD</H4>
+      <h4>OCTOBER 8TH 2022<br>WOOMBYE QLD</h4>
     </div>
   </div>
 
+  <h4 id="countdown-text"></h4>
+
+  <script>
+    const findOverflow = floating => floating - parseInt(floating)
+
+    const updateCountdown = () => {
+      const timeLeft = new Date(2022, 9, 8, 10, 30) - Date.now()
+      let countdown = ''
+      if (timeLeft >= 0) {
+        const days = timeLeft / 1000 / 60 / 60 / 24 
+        const hours = findOverflow(days) * 24
+        const minutes = findOverflow(hours) * 60
+        const seconds = findOverflow(minutes) * 60
+        countdown = `
+          See you in
+          ${parseInt(days)} day${ days === 1 ? '' : 's'},
+          ${parseInt(hours)} hour${ hours === 1 ? '' : 's'},
+          and ${parseInt(minutes)} minute${ minutes === 1 ? '' : 's'}
+        `
+      } else {
+        countdown = `We're married!`
+      }
+      document.getElementById('countdown-text').textContent = countdown.toUpperCase()
+    }
+
+    updateCountdown()
+  </script>
 </body>
 </html>
