@@ -4,6 +4,10 @@
   <title>Bella & Willem</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html, body {
       margin: 0;
@@ -11,6 +15,10 @@
       height: 100%;
       font-family: 'Helvetica';
       font-size: 16px;
+    }
+
+    h1 {
+      font-family: 'Abril Fatface';
     }
 
     .background-image {
@@ -51,12 +59,83 @@
       height: 6rem;
     }
 
-    #countdown-text {
+    /* #countdown-text {
       color: white;
       position: absolute;
       bottom: 0;
       text-align: center;
       width: 100%;
+    } */
+
+    .below-the-fold {
+      display: grid;
+    }
+
+    .content-background, .container {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .content-background {
+      /* background-color: white; */
+      background-color: #e4642c;
+      min-width: 100vw;
+      margin-top: 400px;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 800px;
+      min-height: 50vw;
+      border-radius: 100vw 100vw 0 0;
+      background-color: white;
+    }
+
+    .curvy-bit path {
+      fill: transparent;
+      /* fill: orange; */
+    }
+
+    .curvy-bit text {
+      fill: black;
+      font-family: 'Abril Fatface';
+      text-anchor: middle;
+      /* font-size: 1rem; */
+    }
+
+    .straight-bit {
+      padding: 0 3rem 0rem;
+    }
+
+    #countdown svg {
+      margin-bottom: -0.25rem;
+    }
+
+    #countdown path {
+      fill: #e4642c;
+    }
+
+    #countdown svg text {
+      fill: white;
+      font-family: 'Abril Fatface';
+      text-anchor: middle;
+    }
+
+    @media screen and (max-width: 832px) {
+      .content-background {
+        margin-top: 50vw;
+      }
+
+      .straight-bit {
+        padding: 0 1rem 0rem;
+      }
     }
   </style>
 </head>
@@ -67,13 +146,153 @@
 
   <div class="hero">
     <div class="hero-header">
-      <H4>SAVE THE DATE</H4>
       <img src="./logo_white.svg" class="logo" />
-      <h4>OCTOBER 8TH 2022<br>WOOMBYE QLD</h4>
     </div>
   </div>
 
-  <h4 id="countdown-text"></h4>
+  <div class="below-the-fold">
+    <div class="container">
+      <div class="content">
+
+        <div class="curvy-bit">
+          <svg viewBox="0 0 400 200">
+            <path id="curve" d="M 30,200
+                                A 10,10 0,1,1 370,200" />
+            <text width="400">
+              <textPath xlink:href="#curve" startOffset="50%">
+                together with our families
+              </textPath>
+            </text>
+          </svg>
+        </div>
+
+        <div class="straight-bit">
+
+          <h1>scripture</h1>
+          <p>more stuff</p>
+
+          <h1>rsvps</h1>
+          <p>more stuff</p>
+
+          <h1>schedule</h1>
+          <p>9:30am - Arrive</p>
+          <p>10am - Ceremony begins!</p>
+          <p>10:30am - Ceremony Concludes</p>
+          <p>10:45am - Family Photos, Lawn Games</p>
+          <p>11:30am - Reception Begins</p>
+          <p>3pm - Bride and Groom Depart</p>
+
+          <h1>accommodation</h1>
+          <p>
+            If you’re travelling to celebrate with us, firstly THANK YOU! The
+            Sunshine Coast is a gorgeous area, and there are plenty of
+            affordable and beautiful AirBnBs for you to enjoy.
+          </p>
+
+          <p>
+            If you’re interested in a hinterland vibe, we’d suggest these suburbs:
+            <ul>
+              <li>Woombye (5min to venue)</li>
+              <li>Palmwoods (5min to venue)</li>
+              <li>Mapleton (15min to venue)</li>
+              <li>Montville (20min to venue)</li>
+              <li>Maleny (35min to venue)</li>
+            </ul>
+          </p>
+          
+          <p>
+            If being close to the beach is more your priority, we’d suggest:
+            <ul>
+              <li>Maroochydore (20min to venue)</li>
+              <li>Cotton Tree (25min to venue)</li>
+              <li>Mooloolaba (25min to venue)</li>
+              <li>Mudjimba (20min to venue)</li>
+              <li>Coolum (30min to venue)</li>
+            </ul>
+          </p>
+            
+          <p>
+            If proximity to shops and the central hub of the Sunny Coast is what you’re wanting, we’d suggest:
+            <ul>
+              <li>Maroochydore (20min to venue)</li>
+              <li>Buderim (20min to venue)</li>
+              <li>Sippy Downs (25min to venue)</p></li>
+            </ul>
+          </p>
+
+          <h1>parking</h1>
+          <p>
+            Our venue has very limited parking, so in respect of neighbours,
+            parking is in the New Life Christian Church carpark, which is
+            located at Nambour Christian College. As soon as you drive in, you
+            will see the church carpark and our Event Bus Driver Richy - he will
+            be waiting to shuttle you to Bella Grace Manor. The shuttle will run
+            every 5-10mins, so you won’t be waiting long at all! Richy will be
+            there from 9.10am to 9.45am, ready for you. 
+          </p>
+          <p>
+            If you end up running late, just message RIchy on 0408881708 to let
+            him know so he can meet you at the carpark. If you need to leave the
+            event early, then just text and Richy will meet you on the front
+            veranda to take you back to your car.
+          </p>
+
+          <h1>gifts</h1>
+          <p>
+            Your presence on the day is more than enough, but if you’d like to
+            contribute to our new life and home together, you can find our gift
+            registry <a href="" style="color:red">here (NEED TO UPDATE)</a>.
+            We’ll also have a wishing well on the day if you’d prefer to
+            participate in that.
+          </p>
+
+          <h1>rsvp</h1>
+          <p>Please RSVP by September 1st.</p>
+          <!-- <form id="rsvp-form" name="rsvp" method="post" netlify> -->
+          <form id="rsvp-form" name="rsvp" autocomplete="off">
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname">
+            </br>
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname">
+            </br>
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname">
+            </br>
+
+            <input type="submit" value="Submit">
+          </form>
+
+          <div id="countdown">
+            <svg viewBox="0 0 400 200">
+              <path id="countdown-semi-circle" d="M 30,200
+                                                  A 10,10 0,1,1 370,200" />
+              <path id="countdown-path" d="M 60,200
+                                           A 10,10 0,1,1 340,200" />
+              <text width="400">
+                <textPath id="countdown-text" xlink:href="#countdown-path" startOffset="50%">
+                  see you in
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="content-background"></div>
+
+  </div>
 
   <script>
     const findOverflow = floating => floating - parseInt(floating)
@@ -95,10 +314,188 @@
       } else {
         countdown = `We're married!`
       }
-      document.getElementById('countdown-text').textContent = countdown.toUpperCase()
+      document.getElementById('countdown-text').textContent = countdown
     }
 
     updateCountdown()
+
+
+
+    const inviteGroups = [
+      [
+        'Dale R',
+        'Tanya R'
+      ],
+      [ 'Liv R' ],
+      [ 'Gabi R' ],
+      [
+        'Carolyn G',
+        'Richard G'
+      ],
+      [
+        'Glenda R',
+        'Phillip R'
+      ],
+      [ 'Roslyn B' ],
+      [
+        'Shaun G',
+        'Lorella G',
+        'Nicholas G',
+        'Chiara G'
+      ],
+      [
+        'Che G',
+        'Rachel G'
+      ],
+      [
+        'Jack E',
+        'Tiana E'
+      ],
+      [
+        'Sue R',
+        'Dean R'
+      ],
+      [
+        'Ashley R',
+        'Melina R',
+        'Bradley R'
+      ],
+      [
+        'Tayla R',
+        'Tomas P'
+      ],
+      [
+        'David H',
+        'Ruth H'
+      ],
+      [ 'Mabel H' ],
+      [ 'Trent H' ],
+      [
+        'Oma V',
+        'Opa V'
+      ],
+      [ 'Nanna H' ],
+      [ 'Ben N' ],
+      [ 'Hannah N' ],
+      [ 'Evangeline V' ],
+      [ 'Eden V' ],
+      [
+        'Helen N',
+        'Colin N'
+      ],
+      [
+        'Joanne W',
+        'David W'
+      ],
+      [
+        'Trudy V',
+        'Charlie G'
+      ],
+      [
+        'Gwenda V',
+        'Evan V'
+      ],
+      [
+        'Susan J',
+        'Tony J'
+      ],
+      [
+        'Lil v',
+        'Jacques v'
+      ],
+      [
+        'Belle W',
+        'Martin D'
+      ],
+      [ 'Olivia W' ],
+      [ 'Anastasia V' ],
+      [ 'Jireh V' ],
+      [ 'Kyrie P' ],
+      [ 'Hannah S' ],
+      [
+        'Peter M',
+        'Hannah M'
+      ],
+      [ 'Joe O' ],
+      [ 'Naomi H' ],
+      [ 'Sarah M' ],
+      [ 'Katie B' ],
+      [
+        'Nat B',
+        'Steve B'
+      ],
+      [
+        'Rob H',
+        'Judi H'
+      ],
+      [
+        'Brett L',
+        'Clarissa L'
+      ],
+      [ 'Characa R' ],
+      [
+        'Tom H',
+        'Christi H'
+      ],
+      [ 'Tim D' ],
+      [ 'Dylan M' ],
+      [ 'Emily R' ],
+      [ 'Emmily G' ],
+      [ 'Emily O' ],
+      [ 'Felicity E' ],
+      [
+        'Natalia W',
+        'Brodie W'
+      ],
+      [ 'Jamine G' ],
+      [ 'Samantha B' ],
+      [
+        'Madeline M',
+        'Olly L'
+      ],
+      [ 'Emily M' ],
+      [ 'Jordan J' ],
+      [ 'Tom F' ],
+      [ 'Sophie S' ],
+      [
+        'Eric L',
+        'Diane L'
+      ],
+      [
+        'Ralph N',
+        'Jay N'
+      ],
+      [ 'Tehillah R' ],
+      [ 'Nova v' ],
+      [ 'Megan B' ],
+      [ 'Elise P' ],
+      [ 'Michelle F' ],
+      [ 'Richard G' ],
+      [
+        'Liv H',
+        'Tanner H'
+      ],
+      [ 'Tyrone O' ],
+      [ 'Jesse B' ],
+      [
+        'Caiti M',
+        'Jack M'
+      ],
+      [
+        'Josh D',
+        'Laura D'
+      ],
+      [
+        'Ronnie S',
+        'Lachy S'
+      ],
+      [
+        'Alex W',
+        'Drew W'
+      ],
+      [ 'Isaac P' ],
+      [ 'Katie M' ],
+    ]
   </script>
 </body>
 </html>
