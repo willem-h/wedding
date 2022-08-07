@@ -33,6 +33,24 @@
     "
   >
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Hidden Netlify form -->
+    <form name="rsvp" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="guests" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <select name="attending">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+      <select name="livestream">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+      <textarea name="dietary"></textarea>
+      <textarea name="other"></textarea>
+    </form>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.

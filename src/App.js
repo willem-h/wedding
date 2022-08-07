@@ -7,16 +7,24 @@ import './App.css';
 import Countdown from './Countdown'
 import RSVP from './RSVP'
 
+const blankRSVP = {
+  names: [""],
+  phone: "",
+  email: "",
+  attending: 'true',
+  livestream: 'true',
+  dietary: "",
+  other: "",
+}
+
 function App() {
-  const [rsvp, setRsvp] = useState({
-    names: [""],
-    phone: "",
-    email: "",
-    attending: 'true',
-    livestream: 'true',
-    dietary: "",
-    other: "",
-  }) 
+  const [rsvp, setRsvp] = useState(blankRSVP)
+
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   function handleChange(event) {
     const value = event.target.value
@@ -59,6 +67,25 @@ function App() {
         names: prevRsvp.names.slice(0, -1)
       }
     })
+  }
+
+  function handleSubmit(e) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "rsvp",
+        ...rsvp,
+        guests: rsvp.names.join()
+      })
+    })
+      .then(() => {
+        setRsvp(() => blankRSVP)
+        alert('Your RSVP was sent successfully!')
+      })
+      .catch(() => alert('Something has gone wrong. Please reach out to Bella or Willem to RSVP'))
+
+    e.preventDefault()
   }
 
   return (
@@ -202,6 +229,7 @@ function App() {
               handleAddMember={handleAddMember}
               handleRemoveMember={handleRemoveMember}
               handleNameChange={handleNameChange}
+              handleSubmit={handleSubmit}
             />
 
             <Countdown />
