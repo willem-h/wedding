@@ -7,16 +7,18 @@ import './App.css';
 import Countdown from './Countdown'
 import RSVP from './RSVP'
 
+const blankRSVP = {
+  names: [""],
+  phone: "",
+  email: "",
+  attending: 'true',
+  livestream: 'true',
+  dietary: "",
+  other: "",
+}
+
 function App() {
-  const [rsvp, setRsvp] = useState({
-    names: [""],
-    phone: "",
-    email: "",
-    attending: 'true',
-    livestream: 'true',
-    dietary: "",
-    other: "",
-  })
+  const [rsvp, setRsvp] = useState(blankRSVP)
 
   const encode = (data) => {
     return Object.keys(data)
@@ -77,8 +79,11 @@ function App() {
         guests: rsvp.names.join()
       })
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error))
+      .then(() => {
+        setRsvp(() => blankRSVP)
+        alert('Your RSVP was sent successfully!')
+      })
+      .catch(() => alert('Something has gone wrong. Please reach out to Bella or Willem to RSVP'))
 
     e.preventDefault()
   }
