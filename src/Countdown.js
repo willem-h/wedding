@@ -19,7 +19,6 @@ function Countdown() {
     } else {
       countdown = `We're married!`
     }
-    // document.getElementById('countdown-text').textContent = countdown
     return countdown
   }
 
