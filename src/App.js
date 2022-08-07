@@ -74,7 +74,7 @@ function App() {
       body: encode({
         "form-name": "rsvp",
         ...rsvp,
-        names: rsvp.names.join()
+        guests: rsvp.names.join()
       })
     })
       .then(() => alert('Success!'))
