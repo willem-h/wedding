@@ -25,14 +25,14 @@ function Countdown() {
   const countdownText = updateCountdown()
 
   return (
-    <svg viewBox="0 0 400 200" className="fill-orange-600">
+    <svg viewBox="0 0 400 200" className="fill-[#fae2d9]">
       <path id="countdown-semi-circle" d="M 30,200
                                           A 10,10 0,1,1 370,200" />
       <path id="countdown-path" d="M 60,200
                                   A 10,10 0,1,1 340,200" />
       <text
         width="400"
-        className="font-serif fill-white" 
+        className="font-serif fill-[#f15e22]"
         style={{
           textAnchor: 'middle',
         }}
