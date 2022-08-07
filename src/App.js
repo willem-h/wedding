@@ -133,7 +133,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex w-screen justify-center bg-orange-600">
+        <div className="flex w-screen justify-center bg-[#f15e22]">
           <div className="w-11/12 max-w-screen-md bg-white pt-8 px-4 sm:px-12 space-y-12">
 
             <div className="space-y-6">
