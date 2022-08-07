@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import logo_white from './logo_white.svg';
-import logo_black from './logo_black.svg';
+import semi_circle from './semi_circle.svg'
 import './App.css';
 
 import Countdown from './Countdown'
@@ -94,44 +94,15 @@ function App() {
       <div className="h-screen text-center">
 
         <div className="grid h-4/5 place-items-center">
-          <img src={logo_white} className="h-20 fixed -z-10" alt="Bella & Willem" />
+          <img src={logo_white} className="h-28 fixed -z-10" alt="Bella & Willem" />
         </div>
         <div className="h-1/5"></div>
 
-        <div className="flex w-screen justify-center">
-
-          <div className="relative w-11/12 max-w-screen-md rounded-t-full bg-white justify-center">
-            <svg
-              viewBox="0 0 400 200"
-              style={{background: 'transparent'}}
-            >
-              <path
-                id="curve"
-                d="M 30,200
-                  A 10,10 0,1,1 370,200"
-                style={{
-                  fill: 'transparent',
-                }}
-              />
-              <text
-                width="400"
-                className="font-serif"
-                style={{
-                  textAnchor: 'middle',
-                }}
-              >
-                <textPath xlinkHref="#curve" startOffset="50%">
-                  together with their families
-                </textPath>
-              </text>
-            </svg>
-
-            <div className="w-full flex flex-col absolute bottom-0">
-              <img src={logo_black} className="h-20" alt="Bella & Willem" />
-              <p className="font-serif text-3xl m-16">invite you to celebrate their marriage!</p>
-            </div>
-          </div>
-        </div>
+        <img
+          src={semi_circle}
+          className="w-11/12 max-w-screen-md mx-auto"
+          alt="Together with their families Bella and Willem invite you to celebreate their marriage!"
+        />
 
         <div className="flex w-screen justify-center bg-[#f15e22]">
           <div className="w-11/12 max-w-screen-md bg-white pt-8 px-4 sm:px-12 space-y-12">
@@ -231,6 +202,8 @@ function App() {
               handleNameChange={handleNameChange}
               handleSubmit={handleSubmit}
             />
+
+            <h1 className='font-serif text-4xl'>#thehandrecks</h1>
 
             <Countdown />
           </div>
