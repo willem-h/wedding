@@ -8,7 +8,7 @@ function RSVP({
   return (
     <div className="space-y-6">
       <h1 className="font-serif text-4xl">rsvp</h1>
-      <form className="flex flex-col space-y-6 w-3/5 mx-auto">
+      <form className="flex flex-col space-y-6 w-3/5 mx-auto" netlify>
 
         <label className="flex flex-col space-y-2">
           <span>{ rsvp.names.length === 1 ? "Name" : "Names" }</span>
