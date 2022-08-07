@@ -16,7 +16,13 @@ function App() {
     livestream: 'true',
     dietary: "",
     other: "",
-  }) 
+  })
+
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   function handleChange(event) {
     const value = event.target.value
@@ -59,6 +65,22 @@ function App() {
         names: prevRsvp.names.slice(0, -1)
       }
     })
+  }
+
+  function handleSubmit(e) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "rsvp",
+        ...rsvp,
+        names: rsvp.names.join()
+      })
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error))
+
+    e.preventDefault()
   }
 
   return (
@@ -202,6 +224,7 @@ function App() {
               handleAddMember={handleAddMember}
               handleRemoveMember={handleRemoveMember}
               handleNameChange={handleNameChange}
+              handleSubmit={handleSubmit}
             />
 
             <Countdown />
