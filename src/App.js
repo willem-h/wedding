@@ -93,7 +93,7 @@ function App() {
 
       <div className="h-screen text-center">
 
-        <div className="grid h-4/5 place-items-center">
+        <div className="flex h-4/5 w-screen items-center justify-center">
           <img src={logo_white} className="h-28 fixed -z-10" alt="Bella & Willem" />
         </div>
         <div className="h-1/5"></div>
@@ -134,34 +134,34 @@ function App() {
 
               <p>
                 If you’re interested in a hinterland vibe, we’d suggest these suburbs:
-                <ul className="list-disc">
-                  <li>Woombye (5min to venue)</li>
-                  <li>Palmwoods (5min to venue)</li>
-                  <li>Mapleton (15min to venue)</li>
-                  <li>Montville (20min to venue)</li>
-                  <li>Maleny (35min to venue)</li>
-                </ul>
               </p>
+              <ul className="list-disc inline-block">
+                <li>Woombye (5min to venue)</li>
+                <li>Palmwoods (5min to venue)</li>
+                <li>Mapleton (15min to venue)</li>
+                <li>Montville (20min to venue)</li>
+                <li>Maleny (35min to venue)</li>
+              </ul>
               
               <p>
                 If being close to the beach is more your priority, we’d suggest:
-                <ul className="list-disc">
-                  <li>Maroochydore (20min to venue)</li>
-                  <li>Cotton Tree (25min to venue)</li>
-                  <li>Mooloolaba (25min to venue)</li>
-                  <li>Mudjimba (20min to venue)</li>
-                  <li>Coolum (30min to venue)</li>
-                </ul>
               </p>
+              <ul className="list-disc inline-block">
+                <li>Maroochydore (20min to venue)</li>
+                <li>Cotton Tree (25min to venue)</li>
+                <li>Mooloolaba (25min to venue)</li>
+                <li>Mudjimba (20min to venue)</li>
+                <li>Coolum (30min to venue)</li>
+              </ul>
                 
               <p>
                 If proximity to shops and the central hub of the Sunny Coast is what you’re wanting, we’d suggest:
-                <ul className="list-disc">
-                  <li>Maroochydore (20min to venue)</li>
-                  <li>Buderim (20min to venue)</li>
-                  <li>Sippy Downs (25min to venue)</li>
-                </ul>
               </p>
+              <ul className="list-disc inline-block">
+                <li>Maroochydore (20min to venue)</li>
+                <li>Buderim (20min to venue)</li>
+                <li>Sippy Downs (25min to venue)</li>
+              </ul>
             </div>
 
             <div className="space-y-6">
