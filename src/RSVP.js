@@ -9,6 +9,12 @@ function RSVP({
   return (
     <div className="space-y-6">
       <h1 className="font-serif text-4xl">RSVP</h1>
+      <p>
+        Please RSVP by the 16th of September so we can make sure we’ve got
+        plenty of good times to go around! (We’re aware your invitation says to
+        RSVP by the 1st, but since that invitation got to you a bit later than
+        expected, we’ve extended the due date x)
+      </p>
       <form
         className="flex flex-col space-y-6 w-3/5 mx-auto"
         onSubmit={handleSubmit}
