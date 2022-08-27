@@ -108,7 +108,7 @@ function App() {
           <div className="w-11/12 max-w-screen-md bg-white pt-8 px-4 sm:px-12 space-y-12">
 
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl">schedule</h1>
+              <h1 className="font-serif text-4xl">SCHEDULE</h1>
               <div className='grid grid-cols-3 gap-x-4 text-left'>
                 <p className="justify-self-end">🚗</p><p className="justify-self-start">9:30am - Arrive</p><p></p>
                 <p className="justify-self-end text-slate-400">|&nbsp;</p><p></p><p></p>
@@ -125,7 +125,7 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl">accommodation</h1>
+              <h1 className="font-serif text-4xl">ACCOMMODATION</h1>
               <p>
                 If you’re travelling to celebrate with us, firstly THANK YOU! The
                 Sunshine Coast is a gorgeous area, and there are plenty of
@@ -165,7 +165,7 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl">parking</h1>
+              <h1 className="font-serif text-4xl">PARKING</h1>
               <p>
                 Our venue has very limited parking, so in respect of neighbours,
                 parking is in the New Life Christian Church carpark, which is
@@ -184,7 +184,7 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl">gifts</h1>
+              <h1 className="font-serif text-4xl">GIFTS</h1>
               <p>
                 Your presence on the day is more than enough, but if you’d like
                 to contribute to our new life and home together, you can do so
