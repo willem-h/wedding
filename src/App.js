@@ -193,6 +193,10 @@ function App() {
                   <img
                     src={parking_map}
                     className="w-11/12 max-w-screen-md mx-auto"
+                    alt="
+                      Map showing relative location of event parking to the
+                      greater Sunshine Coast area
+                    "
                   />
                 </a>
               </p>
