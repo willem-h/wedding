@@ -107,6 +107,11 @@ function App() {
         <div className="flex w-screen justify-center bg-[#f15e22]">
           <div className="w-11/12 max-w-screen-md bg-white pt-8 px-4 sm:px-12 space-y-12">
 
+            <div>
+              <h1 className="font-serif text-4xl">October 8th, 2022</h1>
+              <h1 className="font-serif text-4xl">At Bella Grace Manor, Woombye</h1>
+            </div>
+
             <div className="space-y-6">
               <h1 className="font-serif text-4xl">SCHEDULE</h1>
               <div className='grid grid-cols-3 gap-x-4 text-left'>
