@@ -154,7 +154,7 @@ function App() {
                 there from 9.10am to 9.45am, ready for you. 
               </p>
               <p>
-                If you end up running late, just message RIchy on 0408881708 to let
+                If you end up running late, just message Richy on 0408881708 to let
                 him know so he can meet you at the carpark. If you need to leave the
                 event early, then just text and Richy will meet you on the front
                 veranda to take you back to your car.
