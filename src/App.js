@@ -131,43 +131,14 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="font-serif text-4xl">ACCOMMODATION</h1>
+              <h1 className="font-serif text-4xl">DRESS CODE</h1>
               <p>
-                If you’re travelling to celebrate with us, firstly THANK YOU! The
-                Sunshine Coast is a gorgeous area, and there are plenty of
-                affordable and beautiful AirBnBs for you to enjoy.
+                Please dress semi-formal. The vibe is spring garden party.
               </p>
-
               <p>
-                If you’re interested in a hinterland vibe, we’d suggest these suburbs:
+                If Pinterest is your thing, here's a board Bella has put together
+                for inspo: <a href="https://pin.it/3fP1WD6" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">The Handreck Wedding Pinterest</a>.
               </p>
-              <ul className="list-disc inline-block">
-                <li>Woombye (5min to venue)</li>
-                <li>Palmwoods (5min to venue)</li>
-                <li>Mapleton (15min to venue)</li>
-                <li>Montville (20min to venue)</li>
-                <li>Maleny (35min to venue)</li>
-              </ul>
-              
-              <p>
-                If being close to the beach is more your priority, we’d suggest:
-              </p>
-              <ul className="list-disc inline-block">
-                <li>Maroochydore (20min to venue)</li>
-                <li>Cotton Tree (25min to venue)</li>
-                <li>Mooloolaba (25min to venue)</li>
-                <li>Mudjimba (20min to venue)</li>
-                <li>Coolum (30min to venue)</li>
-              </ul>
-                
-              <p>
-                If proximity to shops and the central hub of the Sunny Coast is what you’re wanting, we’d suggest:
-              </p>
-              <ul className="list-disc inline-block">
-                <li>Maroochydore (20min to venue)</li>
-                <li>Buderim (20min to venue)</li>
-                <li>Sippy Downs (25min to venue)</li>
-              </ul>
             </div>
 
             <div className="space-y-6">
@@ -212,6 +183,46 @@ function App() {
                 We’ll also have a wishing well on the day if you’d prefer to
                 participate in that.
               </p>
+            </div>
+
+            <div className="space-y-6">
+              <h1 className="font-serif text-4xl">ACCOMMODATION</h1>
+              <p>
+                If you’re travelling to celebrate with us, firstly THANK YOU! The
+                Sunshine Coast is a gorgeous area, and there are plenty of
+                affordable and beautiful AirBnBs for you to enjoy.
+              </p>
+
+              <p>
+                If you’re interested in a hinterland vibe, we’d suggest these suburbs:
+              </p>
+              <ul className="list-disc inline-block">
+                <li>Woombye (5min to venue)</li>
+                <li>Palmwoods (5min to venue)</li>
+                <li>Mapleton (15min to venue)</li>
+                <li>Montville (20min to venue)</li>
+                <li>Maleny (35min to venue)</li>
+              </ul>
+
+              <p>
+                If being close to the beach is more your priority, we’d suggest:
+              </p>
+              <ul className="list-disc inline-block">
+                <li>Maroochydore (20min to venue)</li>
+                <li>Cotton Tree (25min to venue)</li>
+                <li>Mooloolaba (25min to venue)</li>
+                <li>Mudjimba (20min to venue)</li>
+                <li>Coolum (30min to venue)</li>
+              </ul>
+
+              <p>
+                If proximity to shops and the central hub of the Sunny Coast is what you’re wanting, we’d suggest:
+              </p>
+              <ul className="list-disc inline-block">
+                <li>Maroochydore (20min to venue)</li>
+                <li>Buderim (20min to venue)</li>
+                <li>Sippy Downs (25min to venue)</li>
+              </ul>
             </div>
 
             <RSVP
