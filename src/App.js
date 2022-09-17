@@ -225,6 +225,20 @@ function App() {
               </ul>
             </div>
 
+            <div className="space-y-6">
+              <h1 className="font-serif text-4xl">LIVESTREAM</h1>
+              <p>
+                If you're reading this we already know how special you are to us
+                and we understand that for some of you making the journey to the
+                Sunshine Coast isn't going to happen. We'd love for you to join
+                us for the ceremony via a livestream so that we can celebrate
+                together even from afar.
+              </p>
+              <p>
+                <a href="https://youtu.be/x3Hhnmr9-1o" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">The Handreck Wedding Livestream</a>.
+              </p>
+            </div>
+
             <RSVP
               rsvp={rsvp}
               handleChange={handleChange}
