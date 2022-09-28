@@ -145,19 +145,24 @@ function App() {
               <h1 className="font-serif text-4xl">PARKING</h1>
               <p>
                 Our venue has very limited parking, so in respect of neighbours,
-                parking is in the <a href="https://goo.gl/maps/jE21atMj63S2Sp6X9" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">
-                New Life Christian Church carpark</a>, which is located at
-                Nambour Christian College. As soon as you drive in, you will see
-                the church carpark and our Event Bus Driver Richy - he will be
-                waiting to shuttle you to Bella Grace Manor. The shuttle will run
-                every 5-10mins, so you won’t be waiting long at all! Richy will be
-                there from 9.10am to 9.45am, ready for you. 
+                parking is in the <a href="https://goo.gl/maps/Xt5Q7JMZuGDGzttn6" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">Suncoast Church carpark</a>.
+                As soon as you drive in, you will see the church carpark and our
+                Event Bus Driver Richy - he will be waiting to shuttle you to
+                Bella Grace Manor. The shuttle will run every 10-15mins, so you
+                won’t be waiting long at all! Richy will be there from 9.10am to
+                9.45am, ready for you.
               </p>
+
               <p>
-                If you end up running late, just message Richy on 0408881708 to let
+                If you end up running late, just message Richy on <a href="tel:+61408881708" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">0408881708</a> to let
                 him know so he can meet you at the carpark. If you need to leave the
                 event early, then just text and Richy will meet you on the front
                 veranda to take you back to your car.
+              </p>
+
+              <p>
+                Parking Address: Suncoast Church, Cnr Kiel mtn &, Schubert Rd,
+                Woombye QLD 4559
               </p>
 
               <p>
@@ -171,6 +176,13 @@ function App() {
                     "
                   />
                 </a>
+              </p>
+
+              <p>
+                (Note: If you looked at this section before 28th September you may
+                recognise that this isn't the original address listed. There was
+                a date clash with the school for the carpark that we've had to
+                accommodate.)
               </p>
             </div>
 
