@@ -247,7 +247,7 @@ function App() {
                 together even from afar.
               </p>
               <p>
-                <a href="https://youtu.be/x3Hhnmr9-1o" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">The Handreck Wedding Livestream</a>.
+                <a href="https://youtu.be/wZbjPG8__gE" className="text-orange-600 underline underline-offset-4 hover:underline-offset-2">The Handreck Wedding Livestream</a>.
               </p>
             </div>
 
